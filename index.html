@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="game" id="game">
+
+        <h1>🎯 Guess The Number</h1>
+
+        <p class="subtitle">
+            Can you guess the secret number?
+        </p>
+
+
+        <!-- Difficulty -->
+
+        <label>Difficulty</label>
+
+        <select id="difficulty" onchange="startGame()">
+
+            <option value="easy">
+                Easy (1 - 50)
+            </option>
+
+            <option value="medium">
+                Medium (1 - 100)
+            </option>
+
+            <option value="hard">
+                Hard (1 - 500)
+            </option>
+
+        </select>
+
+
+        <!-- Input -->
+
+        <input type="number" id="guess" placeholder="Enter your guess" onkeydown="enterKey(event)">
+
+
+        <button onclick="checkGuess()">
+            🎯 Guess
+        </button>
+
+
+        <!-- Message -->
+
+        <div class="message" id="message">
+            Game started! 🎮
+        </div>
+
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+            <div>
+                Attempts<br>
+                <b id="attempts">0</b>
+            </div>
+
+            <div>
+                Remaining<br>
+                <b id="remaining">10</b>
+            </div>
+
+        </div>
+
+
+        <!-- Score -->
+
+        <div class="score">
+            🏆 Score: <b id="score">0</b>
+        </div>
+
+
+        <!-- Restart -->
+
+        <button class="restart" onclick="startGame()">
+            🔄 New Game
+        </button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

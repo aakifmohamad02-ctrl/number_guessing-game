@@ -1,0 +1,129 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .game {
+            width: 400px;
+            padding: 35px;
+
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+
+            border-radius: 20px;
+
+            text-align: center;
+            color: white;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 13px;
+
+            margin-top: 10px;
+
+            border: none;
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-top: 15px;
+
+            border: none;
+            border-radius: 10px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: #00d4ff;
+            color: #111;
+
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 25px;
+
+            background: rgba(0, 0, 0, 0.2);
+
+            padding: 15px;
+
+            border-radius: 10px;
+        }
+
+        .message {
+            margin-top: 20px;
+
+            min-height: 30px;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .score {
+            margin-top: 15px;
+
+            font-size: 18px;
+        }
+
+        .restart {
+            background: #ff4757;
+            color: white;
+        }
+
+        .win {
+            animation: win 0.5s infinite alternate;
+        }
+
+        @keyframes win {
+
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+
+        }
